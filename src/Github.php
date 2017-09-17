@@ -12,7 +12,7 @@ class Github
         $this->token = $token;
     }
 
-    public function startRepository($owner, $repository)
+    public function starRepository($owner, $repository)
     {
         $api = "https://api.github.com/user/starred/$owner/$repository";
         $headers = [
@@ -50,6 +50,3 @@ class Github
         return getenv('HOME');
     }
 }
-
-$github = GitHub::loadFromConfig();
-$github->startRepository('oraoto', 'strip-bom');

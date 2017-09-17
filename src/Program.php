@@ -22,10 +22,10 @@ class Program
 
         $composer = $this->loadComposerJSON($projectPath . './composer.json');
         if (isset($composer['require'])) {
-            $this->startPackages(array_keys($composer['require']));
+            $this->starPackages(array_keys($composer['require']));
         }
         if (isset($composer['require-dev'])) {
-            $this->startPackages(array_keys($composer['require-dev']));
+            $this->starPackages(array_keys($composer['require-dev']));
         }
     }
 
@@ -38,14 +38,14 @@ class Program
         return $content;
     }
 
-    private function startPackages($packageNames)
+    private function starPackages($packageNames)
     {
         foreach ($packageNames as $name) {
             $package = Packagist::findPackage($name);
             if (!$package || !$package->isGithubRepository()) {
                 continue;
             }
-            $succ = $this->github->startRepository(
+            $succ = $this->github->starRepository(
                 $package->githubOwner(),
                 $package->githubRepository()
             );
