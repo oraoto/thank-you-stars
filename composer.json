@@ -1,0 +1,23 @@
+{
+    "name": "oraoto/thank-you-stars",
+    "description": "Give your dependencies stars on GitHub!",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Oraoto",
+            "email": "melegant2@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Oraoto\\ThankYouStars\\": "src",
+            "Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.2"
+    }
+}
