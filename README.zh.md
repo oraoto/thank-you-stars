@@ -10,7 +10,7 @@ thank-you-stars
     ~~~
     $ git clone https://github.com/orato/thank-you-stars.git
     $ cd thank-you-stars
-    $ composer install
+    $ composer install --no-dev
     ~~~
 
 2. 保存Github个人Access Token
